@@ -26,7 +26,7 @@ const WorkoutForm = () => {
         if (response.ok) {
             setTitle('')
             setLoad('')
-            setLoad('')
+            setReps('')
             setError(null)
             setEmptyFields([])
             console.log('new Workout added',json)
@@ -40,7 +40,7 @@ const WorkoutForm = () => {
                 <h1 className='m-2 p-2 font-bold'>Add a New Workout</h1>
               <div className="overflow-hidden shadow sm:rounded-md">
                 <div className="bg-slate-400 px-4 py-5 sm:p-6">
-                  <div className="grid grid-cols-6 gap-6">
+                  <div className="flex flex-col">
                     <div className="col-span-6 sm:col-span-2">
                       <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
                         Excersize Title
@@ -52,7 +52,7 @@ const WorkoutForm = () => {
                         // name="title"
                         id="first-name"
                         autoComplete="given-name"
-                        className={`${emptyFields.includes('title') ? 'border border-red-500' : ''} mt-1 block w-full rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm`}
+                        className={`${emptyFields.includes('title') ? 'border border-red-500' : ''} mt-1 h-7 block w-full rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm h`}
                       />
                     </div>
                     <div className="col-span-6 sm:col-span-2">
@@ -66,7 +66,7 @@ const WorkoutForm = () => {
                         // name="load"
                         id="email-address"
                         autoComplete="email"
-                        className={`${emptyFields.includes('load') ? 'border border-red-500' : ''} mt-1 block w-full rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm`}
+                        className={`${emptyFields.includes('load') ? 'border border-red-500' : ''} mt-1 h-7 block w-full rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm`}
                       />
                     </div>
                     <div className="col-span-6 sm:col-span-2">
@@ -80,7 +80,7 @@ const WorkoutForm = () => {
                         // name="reps"
                         id="street-address"
                         autoComplete="street-address"
-                        className={`${emptyFields.includes('reps') ? 'border border-red-500' : ''} mt-1 block w-full rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm`}
+                        className={`${emptyFields.includes('reps') ? 'border border-red-500' : ''} mt-1 h-7 block w-full rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm`}
                       />
                     </div>
                   </div>

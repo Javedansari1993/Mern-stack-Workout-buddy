@@ -18,11 +18,13 @@ const WorkoutDetails = ({workout}) => {
 
   return (
     <div className='bg-green-200 my-4 p-4 rounded-md'>
-      <h4 className='text-green-900 text-lg'>{workout.title}</h4>
+      <div className='flex'>
+       <h4 className='text-green-900 text-lg grow'>{workout.title}</h4>
+       <span className='border-rose-600 border-2 text bg-red-200 rounded-md hover:bg-red-400 cursor-pointer' onClick={handleClick}>delete</span>
+      </div>
       <p><strong>Load (kg):</strong>{workout.load}</p>
       <p><strong>Reps:</strong>{workout.reps}</p>
       <p>{formatDistanceToNow(new Date(workout.createdAt),{addSuffix:true})}</p>
-      <span className='border-rose-600 border-2 text bg-red-200 rounded-md hover:bg-red-400 cursor-pointer' onClick={handleClick}>delete</span>
     </div>
   )
 }

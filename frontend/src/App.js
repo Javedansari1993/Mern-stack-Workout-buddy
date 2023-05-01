@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <div>
+    <div className="bg-grey-800">
       <BrowserRouter>
         <Navbar />
         {/* <WorkoutForm/> */}

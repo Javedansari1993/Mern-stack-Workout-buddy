@@ -22,13 +22,13 @@ const Home = () => {
   }, [dispatch]);
 
   return (
-   <div className="">
-    <div className="sm:workouts mx-8 bg mb-3 h-80 overflow-scroll overflow-x-hidden">
+   <div className="grid grid-cols-3 gap-4">
+    <div className="col-span-2  mx-8 bg mb-3  overflow-scroll overflow-x-hidden">
       {workouts && workouts.map((workout)=>{
         return (<WorkoutDetails key={workout._id} workout={workout}/>)
       })}
     </div>
-    <WorkoutForm/>
+    <WorkoutForm className=""/>
    </div>);
 };
 

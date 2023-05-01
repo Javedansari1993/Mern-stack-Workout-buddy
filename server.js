@@ -21,7 +21,7 @@ app.use("/api/workouts", workoutRoutes);
 mongoose.set("strictQuery", false);
 mongoose
   .connect(
-    "mongodb+srv://javed:javed123@atlascluster.rjxql.mongodb.net/workoutDB"
+    "mongodb+srv://javedcabm:javed1993@cluster0.fb2pnwt.mongodb.net/workoutDB"
   )
   .then(() => {
     //listen for requests

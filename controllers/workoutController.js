@@ -33,7 +33,7 @@ const createWorkout = async (req, res) => {
     emptyFields.push('title')
   }
   if (!load) {
-    emptyFields.push('loaad')
+    emptyFields.push('load')
   }
   if (!reps) {
     emptyFields.push('reps')
